@@ -1,0 +1,22 @@
+<h2 style="text-decoration: underline;">CENTROS EDUCATIVOS</h2>
+<br>
+<img [src]="img"/>
+<br>
+<br>
+
+
+<dl style="padding-left: 10px;">
+  <td>Centro Educativo:</td>
+  <dd>{{name}}</dd>
+
+  <td>Localidad:</td>
+  <dd>{{city}}</dd>
+
+  <td>Familias Profesionales</td>
+  <dd>{{fp}}</dd>
+</dl>
+
+<button class="btn btn-primary" (click)="changeSchool()" (click)="changeImg()" style="margin: 5px;">
+  Cambiar centro
+</button>
+

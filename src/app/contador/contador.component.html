@@ -1,0 +1,7 @@
+<h3>Contador: {{contador}}</h3>
+<input type="text" #val placeholder="Inserte valor a sumar/restar">
+<br>
+<br>
+<button (click)="incrementBy( val.value )">SUMA</button>
+<button (click)="resetCounter()">RESET</button>
+<button (click)="decrementBy(val.value)">RESTA</button>

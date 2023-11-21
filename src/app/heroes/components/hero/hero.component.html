@@ -1,0 +1,32 @@
+<h2 style="text-decoration: underline;">Dragon Ball</h2>
+<br>
+<img [src]="img"/>
+<br>
+<br>
+
+
+<dl style="padding-left: 10px;">
+  <td>Nombre:</td>
+  <dd>{{name}}</dd>
+
+  <td>Edad:</td>
+  <dd>{{age}}</dd>
+
+  <td>Metodo:</td>
+  <dd>{{getHeroDescription()}}</dd>
+
+  <td>Capitalizado:</td>
+  <dd>{{capitalizedName}}</dd>
+</dl>
+
+<button *ngIf="name==='Goku'" class="btn btn-primary" (click)="changeImg()" (click)="changeName()"  style="margin: 5px;">
+  Cambiar nombre
+</button>
+
+<button *ngIf="age===27" class="btn btn-primary" (click)="changeAge()" style="margin: 5px;">
+  Cambiar edad
+</button>
+
+<button *ngIf="name!=='Goku'|| age!==27" class="btn btn-danger" (click)="undo()" style="margin: 5px;">
+  Restablecer
+</button>
