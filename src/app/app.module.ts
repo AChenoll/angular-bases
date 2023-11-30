@@ -6,8 +6,8 @@ import { HeroesModule } from './heroes/heroes.module';
 import { AppComponent } from './app.component';
 import { CounterComponent } from './contador/contador.component';
 import { PlayamarComponent } from './instituto/playamar/playamar.component';
-import { MainPageComponent } from './dbz/pages/main-page.component';
 import { DbzModule } from './dbz/dbz.module';
+
 
 @NgModule({
   declarations: [
