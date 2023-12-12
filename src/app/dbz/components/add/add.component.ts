@@ -1,5 +1,6 @@
 import { Personaje } from './../../interfaces/personajes.interface';
 import { Component, EventEmitter, Output } from '@angular/core';
+import { v4 as uuid } from 'uuid';
 
 @Component({
   selector: 'dbz-add-personaje',
@@ -11,18 +12,19 @@ export class DbzAdd {
   public onNewPersonaje: EventEmitter<Personaje>=new EventEmitter();
 
   public personaje:Personaje={
+    id:uuid(),
     nombre:'',
     fuerza:0
   };
 
   public addPersonaje():void{
+    // debugger;
     console.log(this.personaje);
     if(this.personaje.nombre.length===0) return;
 
     this.onNewPersonaje.emit(this.personaje);
 
     //Inicialiazamos los valores
-    this.personaje.nombre='';
-    this.personaje.fuerza=0;
+    this.personaje={id:uuid(), nombre: '', fuerza:0};
   }
 }

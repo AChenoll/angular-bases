@@ -7,17 +7,21 @@
     let esPrimero=first
     "
 
-  class="list-group-item"
+  class="list-group-item d-flex justify-content-between align-items-center"
   [ngClass]="{
     'list-group-item-primary':esPrimero,
     'list-group-item-success':esPar,
     'list-group-item-danger':esUltimo
   }"
   >
-  <span>{{i+1}} - </span>
-  <span>{{personaje.nombre}} - </span>
-  <strong>Fuerza: </strong>
-  <span>{{personaje.fuerza}}</span>
-  <span> - Es un manta: {{esPar}} - Es el ultimo: {{esUltimo}}</span>
-  </li>
+  <div>
+    <span class="text-primary">{{i+1}} - </span>
+    <span>{{personaje.nombre}} - </span>
+    <strong>Fuerza: </strong>
+    <span>{{personaje.fuerza}}</span>
+    <span> - Es un manta: {{esPar}} - Es el ultimo: {{esUltimo}}</span>
+  </div>
+
+  <button class="btn btn-danger"(click)="delete(personaje.id)">X</button>
+</li>
 </ul>
