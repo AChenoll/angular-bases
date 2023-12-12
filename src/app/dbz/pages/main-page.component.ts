@@ -10,6 +10,18 @@ import { Component, OnInit } from '@angular/core';
 
 export class MainPageComponent {
 
-  constructor(public DbzService: DbzService) {}
+  constructor(private DbzService: DbzService) {}
+
+  get personajes(): Personaje[]{
+    return this.DbzService.personajes;
+  }
+
+  onDeletePersonaje(id:string):void{
+    this.DbzService.deletePersonajeById(id);
+  }
+
+  onNewPersonaje(personaje:Personaje):void{
+    this.DbzService.addPersonaje(personaje);
+  }
 
 }

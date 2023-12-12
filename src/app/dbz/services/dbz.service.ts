@@ -29,8 +29,10 @@ export class DbzService {
     fuerza: 1
   }];
 
-  public onNewPersonaje(personaje: Personaje):void{
-    this.personajes.push(personaje);
+  public addPersonaje(personaje: Personaje):void{
+    const newPersonaje: Personaje={...personaje, id:uuid()};
+
+    this.personajes.push(newPersonaje);
   }
 
   // public onDeletePersonaje(indice:number):void{

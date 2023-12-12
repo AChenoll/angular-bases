@@ -10,7 +10,7 @@ import { v4 as uuid } from 'uuid';
 export class DbzLista {
 
   @Output()
-  public deletePersonajeById: EventEmitter<string>=new EventEmitter();
+  public onDeletePersonajeById: EventEmitter<string>=new EventEmitter();
 
   @Input()
   public listaPersonajes:Personaje[]=[{
@@ -19,7 +19,7 @@ export class DbzLista {
     fuerza: 9000
   }]
 
-  public delete(id:string=''):void{
-    this.deletePersonajeById.emit(id);
+  public deletePersonajeById(id:string=''):void{
+    this.onDeletePersonajeById.emit(id);
   }
 }
